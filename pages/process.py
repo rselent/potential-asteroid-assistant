@@ -16,6 +16,16 @@ column1 = dbc.Col(
             """
         
             ## Process
+            
+            -----
+            
+            #### Interest
+            
+            I was originally attracted to doing this project when I stumbled across 
+            an entry on Kaggle. Another user had done something similar, and the
+            dataset seemed quite interesting. I had spent 1-2 weeks investigating,
+            exploring, and cleaning the dataset -- utilizing both domain knowledge I 
+            had already possessed and active research --  
 
 
             """
