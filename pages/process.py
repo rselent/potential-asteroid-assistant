@@ -21,21 +21,37 @@ column1 = dbc.Col(
             
             #### Interest
             
-            I was originally attracted to doing this project when I stumbled across 
-            an entry on Kaggle. Another user had done something similar, and the
-            dataset seemed quite interesting. I had spent 1-2 weeks investigating,
-            exploring, and cleaning their dataset -- utilizing both domain knowledge I 
+            As an artist and as someone who has studied art most of their life, 
+            whenever I approach a project like this, I'm often inundated with 
+            creative thoughts of "*Wouldn't it be cool if...*"
+            
+            "*Wouldn't it be cool if..?*"
+            
+            Wouldn't it be cool if I could create something that could help 
+            with literally **saving the planet**?
+            
+            I was attracted to doing this project specifically when I stumbled across 
+            a dataset on Kaggle. Another user had done something similar, and the
+            dataset seemed quite interesting (and quite new). I had spent 1-2 weeks investigating,
+            exploring, and cleaning their dataset -- combining both domain knowledge I 
             had already possessed and active research -- which they had generated
             utilizing Jet Propulsion Laboratories' own *Small-Body Database Search Engine*.
             
-            After that initial time, I had found aspects of that dataset inadequate, so I
-            decided to try generating my own dataset from JPL. Utilizing the same
-            features as the Kaggle set, and adding a couple more (what I was looking for),
-            I had found success!
+            Through my exploration and investigation, I began to feel aspects of that dataset 
+            were becoming inadequate, so I decided to try generating my own dataset from JPL. 
+            Through selecting the same features as the baseline Kaggle set, and adding 
+            the few more I was searching for, I had found success!
             
-            And almost 100,000 more observations!
+            And almost 100,000 more observations, too!
             
-            #### 
+            -----
+            
+            #### Shock
+            
+            In total, I had selected a dataset that contained almost 1,000,000 observations --
+            quite the jump from the last project I had done, which had an 
+            absolutely-massive-at-the-time-50,000 observations. Coincidentally, that previous
+            project had also been my first *actual* data science project ever.
 
 
             """
