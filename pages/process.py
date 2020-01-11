@@ -19,6 +19,8 @@ column1 = dbc.Col(
             
             -----
             
+            -----
+            
             #### Interest
             
             As an artist and as someone who has studied art most of their life, 
@@ -44,14 +46,46 @@ column1 = dbc.Col(
             
             And almost 100,000 more observations, too!
             
-            -----
+            In total, I had generated a dataset that contained almost 1,000,000 observations 
+            across over 30 features -- quite the jump from the last project I had done, 
+            which had an absolutely-massive-at-the-time *50,000* observations. 
+            Coincidentally, that previous  project had also been my *first* 
+            actual data science project ever. Quite the jump, indeed.
+
+			-----
             
             #### Shock
             
-            In total, I had selected a dataset that contained almost 1,000,000 observations --
-            quite the jump from the last project I had done, which had an 
-            absolutely-massive-at-the-time-50,000 observations. Coincidentally, that previous
-            project had also been my first *actual* data science project ever.
+            After re-exploring my shiny, new, *hot-off-the-presses* dataset, direct  
+            from the venerable *JPL* and packed with with new data like *1-sigma 
+            uncertainty values*, I had almost immediately surmised that I'll still 
+            have to drop about half of its features. *Womp womp*.
+            
+            To be fair, most of these features had massively incomplete data, on the 
+            order of 80% NaN values. One feature even had just 8 (*eight*) real values 
+            recorded. Out of almost 922,000 observations. I made the judgment that 
+            perhaps -- with the objective that I had in mind and the more-complete domain 
+            knowledge I now possessed -- it would be better or even acceptable for me 
+            to drop these features entirely, instead of imputing or trying to fill in 
+            such wholly incomplete data and potentially tainting the following process 
+            or, worse, the results. 
+            
+            Little did I know, I would have to consider this decision again when 
+            my *target*, the very feature I intend to predict, reminded me that it 
+            still had almost 40,000 missing values. I felt like this was an even 
+            larger moral quandary. The only **logical** (or least amoral?) solution was 
+            to drop all 40,000 of those observations. But if I did that, that's 40,000 
+            objects that could *potentially* harm someone on this planet.
+            
+            I compromised with my conscience by assigning those 40,000 observations to 
+            a separate, tertiary subset, that I could make blind predictions on as 
+            an ultimate stretch goal.
+            
+            -----
+            
+            
+            
+            
 
 
             """
