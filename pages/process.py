@@ -21,9 +21,21 @@ column1 = dbc.Col(
 			
 			-----
 			
+			I want to preface this section by drawing attention to that word above: 
+			**Process**. Very much like in art, a process is neither supposed to be quick 
+			nor easy. So this will not be a short or digestible blog post, either. This 
+			will be a declaration of *my process* with this project -- my thoughts, 
+			concerns, results, how I dealt with those and various other related things, 
+			and how I connected not just with the data, but ultimately, how I bring 
+			that story to you as well.
+			
+			----- 
+			
+			-----
+			
 			#### Interest
 			
-			As an artist and as someone who has studied art most of their life, 
+			As an artist and someone who has studied art most of their life, 
 			whenever I approach a project like this, I'm often inundated with 
 			creative thoughts of "*Wouldn't it be cool if...*"
 			
@@ -41,7 +53,7 @@ column1 = dbc.Col(
 			
 			Through my exploration and investigation, I began to feel aspects of that dataset 
 			were becoming inadequate, so I decided to try generating my own dataset from JPL. 
-			Through selecting the same features as the baseline Kaggle set, and adding 
+			Through selecting the same features as the baseline Kaggle set and adding 
 			the few more I was searching for, I had found success!
 			
 			And almost 100,000 more observations, too!
@@ -56,12 +68,12 @@ column1 = dbc.Col(
 			"""
 			-----
 			
-			#### Shock
+			#### Incite
 			
-			After re-exploring my shiny, new, *hot-off-the-presses* dataset, direct  
+			After re-exploring my shiny, new, *hot-off-the-presses* dataset, direct 
 			from the venerable *JPL* and packed with with new data like *1-sigma 
-			uncertainty values*, I had almost immediately surmised that I'll still 
-			have to drop about half of its features. *Womp womp*.
+			uncertainty values*, I had unfortunately surmised that I'll still have 
+			to drop about half of its features. *Womp womp*.
 			
 			To be fair, most of these features had massively incomplete data, on the 
 			order of 80% NaN values. One feature even had just 8 (*eight*) real values 
@@ -99,22 +111,26 @@ column1 = dbc.Col(
 			"""
 			-----
 			
-			#### Purpose
+			#### Inquire
 			
 			The project rubric required that I build / fit / train a linear model, 
 			regardless of my confidence in how much it wouldn't produce desirable 
 			results... with this dataset, I mean. Sure enough, the best accuracy 
 			score I was able to produce with a linear Logistic Regression model was 
-			approximately 99.76% -- almost a perfect complement to my baseline. 
-			Interesting, but unhelpful; so I felt compelled to look at the feature 
+			approximately 99.76% -- close to being a perfect complement to my baseline. 
+			Interesting, but unhelpful. I felt compelled to inspect the feature 
 			weights or coefficients that the model was assigning, and much to my chagrin 
 			they made little sense: orbital class was very positively weighted, which 
-			was expected, but other metrics like an asteroid's perihelion (q), 
+			was expected, but other features like an asteroid's perihelion (q), 
 			Minimum Orbit Intersection Distance, absolute magnitude (H), or its orbital 
-			condition code were weighted *negatively*. What?? Those latter metrics 
+			condition code were weighted *negatively*. What?? Those latter features 
 			should be far more important than that!
             
-			Naturally, this invoked more curiosity and research.
+			Naturally, this evoked more curiosity and research, and following along 
+			with the rubric, I constructed a pipeline to fit a Random Forest model -- it's 
+			another model we were explicitly taught how to use after all, so there should 
+			be no issues. Lo and behold, however, it produced a validation accuracy of 
+			a whopping *99.994%*! 
             
             
 
