@@ -83,6 +83,27 @@ column1 = dbc.Col(
             
             -----
             
+            Once I started getting down to the "real work," right off the bat, I got my 
+            baseline. Accuracy. Alright fam, we got this.  
+            ...  
+            0.23%. 1/4 of a percent. What?? This really threw me for a loop. Almost 
+            900,000 observations -- 900,000 recorded asteroids -- and only ~2,000 of 
+            them are actually classified as Potentially Hazardous?? I knew space was big 
+            (*spaaaaaaaace*), but that still shocked me. For a brief moment, I reflected 
+            on those 40,000 observations I set aside and thought, "*What if*." 
+            My reflection broke quickly though, thankfully (lest I revisit that moral 
+            conundrum). Clearly I'd need another way to evaluate my models, as it's 
+            just too heavily imbalanced.
+            
+            -----
+            
+            The project's rubric required that I build / fit / train a linear model, 
+            regardless of my confidence in how much it *wouldn't* produce desirable 
+            results... with this dataset, I mean. Sure enough, the best accuracy 
+            score I was able to produce with a Logistic Regression model was 
+            approximately 99.76% -- almost a perfect (inverse) complement to my 
+            'baseline'.
+            
             
             
             
