@@ -32,6 +32,8 @@ column1 = dbc.Col(
 			----- 
 			
 			-----
+			"""
+		    """
 			
 			#### Interest
 			
@@ -64,9 +66,9 @@ column1 = dbc.Col(
 			Coincidentally, that previous  project had also been my *first* 
 			actual data science project ever. Quite the jump, indeed.
 			
-			"""
-			"""
 			-----
+			"""
+			"""
 			
 			#### Incite
 			
@@ -106,10 +108,10 @@ column1 = dbc.Col(
 			My reflection broke quickly though, thankfully (lest I revisit that moral 
 			conundrum). Clearly I'd need another way to evaluate my models, as it's 
 			just too heavily imbalanced.
-			
-			"""
-			"""
+
 			-----
+			"""
+			"""
 			
 			#### Inquire
 			
@@ -130,11 +132,56 @@ column1 = dbc.Col(
 			with the rubric, I constructed a pipeline to fit a Random Forest model -- it's 
 			another model we were explicitly taught how to use after all, so there should 
 			be no issues. Lo and behold, however, it produced a validation accuracy of 
-			a whopping *99.994%*! 
-            
-            
+			a whopping *99.994%*! If that isn't *beating the baseline*, I don't know what is.
+			
+			Clearly, something was going on here, though. Both a linear model *and* a 
+			tree-based model are behaving like this? Something didn't feel right. 
+			As I was bringing up my concerns about the results with both my Team and
+			Section Leads, I was also in tandem building *another* pipeline. 
+			The few methods we had been taught (with sound reason, I'll add) just 
+			did not seem to be serving me well in this instance, so maybe I needed to 
+			think (and eventually reach... and then climb) outside the proverbial box 
+			a little. 
+
+			-----
+            """
+			"""
+						
+			#### Incept
+			
+			It started with research -- a *lot* of research. This was a horrible decision 
+			vis-a-vis time management during a build week, but I felt I had no other choice. 
+			I could've accepted my fate (or rather, the fate of my predictive models thus far), 
+			but if that was truly to be my fate with this project, I was going to make Fate work 
+			*damn hard* to get her way. So, as a method to confirm the model behaviours that I've 
+			been seeing so far, I chose *another* linear model: Perceptron. Up until now, 
+			I haven't been altering or forcing parameters all that much -- outside of n_jobs 
+			(for expedience), random_state (for reproducibility), and such -- because my 
+			guiding principle for this project was "find a model that fits my needs first," 
+			as every other dataset that I've worked with while here at Lambda School has 
+			had relatively balanced prediction targets and been, well, comparatively "easy." 
+			
+			
+			
+			"""
+			
+			
+#			As my Team and Section Leads got back to me with 
+#			their recommendations of abandoning the Accuracy Score evaluation metric in 
+#			favour of something a bit more minority- or recall-friendly, I was tepidly 
+#			settling on another linear model test: this time it would be with Perceptron, 
+#			though. 
+#			
+#			I didn't know a lot about Perceptron, but its own process seemed to work a lot 
+#			like Linear Regression, so for consistency (change as few variables as possible 
+#			to compare things, right Science?)
+#
+			"""
+			-----
+			"""
 
 
+            """
             """
         ),
 
