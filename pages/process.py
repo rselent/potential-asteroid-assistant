@@ -33,6 +33,7 @@ column1 = dbc.Col(
 			
 			-----
 			"""
+			
 		    """
 			
 			#### Interest
@@ -68,6 +69,7 @@ column1 = dbc.Col(
 			
 			-----
 			"""
+			
 			"""
 			
 			#### Incite
@@ -111,6 +113,7 @@ column1 = dbc.Col(
 
 			-----
 			"""
+			
 			"""
 			
 			#### Inquire
@@ -145,6 +148,7 @@ column1 = dbc.Col(
 
 			-----
             """
+			
 			"""
 						
 			#### Incept
@@ -161,31 +165,61 @@ column1 = dbc.Col(
 			as every other dataset that I've worked with while here at Lambda School has 
 			had relatively balanced prediction targets and been, well, comparatively "easy." 
 			
+			Surprisingly, Perceptron produced the same sort of results that my previous 
+			two attempts had thrown at me, except this model was perfectly, right on the money: 
+			99.77% accuracy. By this point I'm thinking to myself, "*This is way too convenient; 
+			this is a perfect complement to my baseline.*" 
 			
+			When my Team and Section Leads got back to me with their recommendations of 
+			abandoning the accuracy score evaluation metric in favour of something 
+			a bit more minority- or recall-friendly -- like Precision-Recall or 
+			F-scores -- they also suggested I plot ~~to take over the world~~ 
+			a confusion matrix, to see what's really going on beneath the surface; 
+			to see what kind of predictions this model was making (and by my own 
+			presumption, my previous models as well judging by their similar accuracy 
+			scores). It's probably better to just *show* you the results.
 			
+			< Confusion atrix goes here, because words just can't describe >
+			
+			Just like Owen Wilson, "*Wow*," was my first reaction. I mean, It's not 
+			making *any* 'yes' predictions. At all.	And in that moment I truly 
+			understood the value of confusion matrices, which just a few weeks ago 
+			were, well, *confusing me* to no end. 
+			
+			Additionally, while researching how to calculate a digestible precision-recall 
+			score, I had learned about precision-recall curves and what they can tell 
+			us about how a model reacts to a dataset. 
+			
+			< PRC goes here >
+			
+			In short, this curve, along with the confusion matrix from earlier, tells 
+			me that this kind of model is just not a good *fit* for this kind of heavily 
+			unbalanced prediction. 
+			
+			So, what kind of model *would* be a good fit, then?
+			
+			-----
 			"""
 			
-			
-#			As my Team and Section Leads got back to me with 
-#			their recommendations of abandoning the Accuracy Score evaluation metric in 
-#			favour of something a bit more minority- or recall-friendly, I was tepidly 
-#			settling on another linear model test: this time it would be with Perceptron, 
-#			though. 
+#			INSIGHTS:  (split into 2 sections: 1) about question/space, 2) about data/process
 #			
-#			I didn't know a lot about Perceptron, but its own process seemed to work a lot 
-#			like Linear Regression, so for consistency (change as few variables as possible 
-#			to compare things, right Science?)
-#
+#			* 'Oumuamua's trajectory, when it was discovered 
+#			* the asteroid that wiped out the dinosaurs was only 10km in diameter (e.g. the length of Manhattan)
+#			* 
+#			
+#			* If you think about a confusion matrix like a top-down view, then a PRC is a side view 
+#			* When a PRC is a flat line like this
+#			* 
+#			
+#			
+			
 			"""
 			-----
 			"""
 
+		),
 
-            """
-            """
-        ),
-
-    ],
+	],
 )
 
 layout = dbc.Row([column1])
