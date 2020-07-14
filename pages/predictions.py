@@ -12,7 +12,7 @@ import pandas as pd
 from catboost import CatBoostClassifier
 
 
-pipeline = load( 'assets/lightPred.joblib')
+# pipeline = load( 'assets/lightPred.joblib')		# cannot use LightGB model -- model dumped incorrectly 
 nyanline = load( 'assets/nyanPred.joblib')
 
 @app.callback(
@@ -25,7 +25,7 @@ def nyanPredict( nyanCode, nyanNeo, nyanClass):
 #		cat_features= ['condition_code', 'neo', 'class'],
 		data= [[nyanCode, nyanNeo, nyanClass]]
 	)
-	yPred = nyanline.predict( df)[0]
+	yPred = nyanline.predict( df)
 	return yPred
 
 
