@@ -51,8 +51,17 @@ df = df.dropna()
 df[ df.columns[ 1]] = df[ df.columns[ 1]].replace( {'Y': 1, 'N': 0}).astype( int)
 df[ df.columns[ 2]] = df[ df.columns[ 2]].replace( {'Y': 1, 'N': 0}).astype( int)
 
-fig = px.histogram( df.where( df.neo > 0), x= 'first_obs_y', y= 'neo', range_x= (1920, 2019), cumulative= True,
-					title= 'Near-Earth Objects Recorded Over Time', labels= {'Year', 'Number of Known NEOs'})
+fig = px.histogram( df.where( df.neo > 0), x= 'first_obs_y', y= 'neo', 
+					range_x= (1969, 2019), cumulative= True,
+					labels= {'first_obs_y': 'Year', 'neo': 'Known NEOs'}
+)
+fig.update_layout( 
+		title= {
+				'text': 'Cumulative Near-Earth Objects Recorded, 1969 - 2019',
+				'x': 0.5,
+				'xanchor': 'center'
+				}
+)
 
 column2 = dbc.Col(
 	[
