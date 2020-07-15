@@ -93,13 +93,13 @@ column2 = dbc.Col(
 			#### Near-Earth Object
 			"""
 		),
-		dcc.Checklist(
+		dcc.RadioItems(
 			id='nyanNeo',
 			options=[
 					{'label': ' Yes', 'value': 'Y'},
 					{'label': 'No', 'value': 'N'},
 					],
-			#value= 'Y',
+			value= 'Y',
 			labelStyle= {'margin-left': '12px'},
 			style={'display': 'inline-block'},
 			className= 'wrx',
