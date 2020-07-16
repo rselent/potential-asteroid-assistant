@@ -35,7 +35,7 @@ column1 = dbc.Col(
 	[
 		dcc.Markdown(
 			"""
-			## Prediction Assistant (lite)
+			## Prediction Assistant
 
 			This tool is built to analyze three pre- categorized features of an asteroid, 
 			and then determine whether that asteroid is potentially hazardous to life
@@ -56,12 +56,24 @@ column1 = dbc.Col(
 			className= 'wrx',
 		),
 
-    ],
-    md=4,
+#		html.Label('Prediction'),
+		dcc.Markdown(
+			"""
+			-----
+			-----
+			"""
+		),
+		html.H3( 'Prediction Result', className= 'wrx'),
+		html.Div( id= 'prediction-content', className= 'lead')
+
+	],
+#	width= 4,
+	md= 5, xs= 12,
+	align= 'start',
 )
 
 column2 = dbc.Col(
-    [
+	[
 #		html.Label('Condition Code'),
 		dcc.Markdown(
 			"""
@@ -97,7 +109,7 @@ column2 = dbc.Col(
 			id='nyanNeo',
 			options=[
 					{'label': ' Yes', 'value': 'Y'},
-					{'label': 'No', 'value': 'N'},
+					{'label': ' No', 'value': 'N'},
 					],
 			value= 'Y',
 			labelStyle= {'margin-left': '12px'},
@@ -105,6 +117,7 @@ column2 = dbc.Col(
 			className= 'wrx',
 		),
 
+#		html.Label('Class'),
 		dcc.Markdown(
 			"""
 			&nbsp;
@@ -117,44 +130,33 @@ column2 = dbc.Col(
 			"""
 		),
 
-#		html.Label('Class'),
 		dcc.RadioItems(
 			id='nyanClass',
 			options=[
-				{'label': 'Main-Belt Asteroid', 'value': 'MBA'},
-				{'label': 'Outer Main-Belt Asteroid', 'value': 'OMB'},
-				{'label': 'Inner Main-Belt Asteroid', 'value': 'IMB'},
-				{'label': 'Mars-Crossing Asteroid', 'value': 'MCA'},
-				{'label': 'Apollo', 'value': 'APO'},
-				{'label': 'Amor', 'value': 'AMO'},
-				{'label': 'Jupiter Trojan', 'value': 'TJN'},
-				{'label': 'TransNeptunian Object', 'value': 'TNO'},
-				{'label': 'Aten', 'value': 'ATE'},
-				{'label': 'Centaur', 'value': 'CEN'},
-				{'label': 'Atira', 'value': 'IEO'},
-				{'label': 'Asteroid (Other)', 'value': 'AST'},
-				{'label': 'Hyperbolic Asteroid', 'value': 'HYA'},
-				{'label': 'Parabolic Asteroid', 'value': 'PAA'},
+				{'label': ' Main-Belt Asteroid', 'value': 'MBA'},
+				{'label': ' Outer Main-Belt Asteroid', 'value': 'OMB'},
+				{'label': ' Inner Main-Belt Asteroid', 'value': 'IMB'},
+				{'label': ' Mars-Crossing Asteroid', 'value': 'MCA'},
+				{'label': ' Apollo', 'value': 'APO'},
+				{'label': ' Amor', 'value': 'AMO'},
+				{'label': ' Jupiter Trojan', 'value': 'TJN'},
+				{'label': ' TransNeptunian Object', 'value': 'TNO'},
+				{'label': ' Aten', 'value': 'ATE'},
+				{'label': ' Centaur', 'value': 'CEN'},
+				{'label': ' Atira', 'value': 'IEO'},
+				{'label': ' Asteroid (Other)', 'value': 'AST'},
+				{'label': ' Hyperbolic Asteroid', 'value': 'HYA'},
+				{'label': ' Parabolic Asteroid', 'value': 'PAA'},
 					],
 			value= 'MBA',
 			labelStyle= {'margin': '5px'},
 			style= {'display': 'inline-block', 'margin-left': '7px'},
 			className= 'wrx',
 		),
-#		html.Label('Prediction'),
-		dcc.Markdown(
-			"""
-			-----
-			-----
-			"""
-		),
-
-
-		html.H3( 'PHA Prediction', className= 'wrx'),
-		html.Div( id= 'prediction-content', className= 'lead')
-
 
 	],
+#	width= 4,
+	md= 3, xs= 12,
 )
 
 column3 = dbc.Col(
@@ -162,7 +164,7 @@ column3 = dbc.Col(
 		dcc.Markdown(
 			"""
 			-----  
-			An orbit condition code (or U-uncertainty parameter) is an integer between 0 and 9
+			An orbit condition code (or *U-uncertainty parameter*) is an integer between 0 and 9
 			that indicates how well-known an asteroid's orbit is, with 0 being absolute certainty. 
 			The closer to 9 this value is, the more potential danger an asteroid presents.
 			
@@ -182,8 +184,17 @@ column3 = dbc.Col(
 		),
 
 	],
+#	width= 4,
+	md= 4, xs= 12,
 )
 
 
 
-layout = dbc.Row( [column1, column2, column3])
+layout = html.Div( 
+	[
+		dbc.Row( [column1, column2, column3]),				# --> rows within columns possible??
+		
+		
+	]
+)
+
