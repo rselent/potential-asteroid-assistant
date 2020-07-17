@@ -68,7 +68,7 @@ column1 = dbc.Col(
 
 	],
 #	width= 4,
-	md= 5, xs= 12,
+	md= 4, xs= 12,
 	align= 'start',
 )
 
@@ -156,7 +156,7 @@ column2 = dbc.Col(
 
 	],
 #	width= 4,
-	md= 3, xs= 12,
+	md= 4, xs= 12,
 )
 
 column3 = dbc.Col(
